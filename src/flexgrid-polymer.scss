@@ -42,7 +42,7 @@ body /deep/ .row {
 // add class overrides
 @each $val in $fg-breakpoints {
 	$namespace: nth($val, 1);
-	body /deep/ .force-#{$namespace} {
+	body /deep/ .force-#{$namespace} /deep/ {
 		@include grid-sizes($namespace);
 	}
 }
