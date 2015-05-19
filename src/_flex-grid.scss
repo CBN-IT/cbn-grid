@@ -134,33 +134,3 @@ $fg-breakpoints: (
   }
 
 }
-
-
-/**
- * Build the grid in two steps, to help minimize file size
- * Step 1, for each namespace, create the grid-base
- * Step 2, for each namespace, wrap the col width/offset measurements in their breakpoint media query
- */
-@each $val in $fg-breakpoints {
-
-  $namespace: nth($val, 1);
-  @include grid-base( $namespace );
-
-}
-
-@each $val in $fg-breakpoints {
-  @if length($val) == 1 {
-
-    $namespace: nth($val, 1);
-    @include grid-sizes( $namespace );
-
-  } @else {
-
-    $namespace: nth($val, 1);
-    $size: nth($val, 2);
-
-    @media only screen and (min-width: #{$size}) {
-      @include grid-sizes( $namespace );
-    }
-  }
-}

@@ -1,8 +1,12 @@
 /**
- * Flex Grid - enhanced.
+ * Flex Grid - enhanced, Polymer version (all rules have /deep/ combinator).
  */
 
 @import "_flex-grid";
+
+body /deep/ .row {
+	@extend .row
+}
 
 /**
  * Build the grid in two steps, to help minimize file size
@@ -11,28 +15,34 @@
  */
 @each $val in $fg-breakpoints {
 	$namespace: nth($val, 1);
-	@include grid-base($namespace);
+	body /deep/ {
+		@include grid-base($namespace);
+	}
 }
 
 @each $val in $fg-breakpoints {
 	@if length($val) == 1 {
 		$namespace: nth($val, 1);
-		@include grid-sizes($namespace);
+		body /deep/ {
+			@include grid-sizes($namespace);
+		}
 		
 	} @else {
 		$namespace: nth($val, 1);
 		$size: nth($val, 2);
 		
 		@media only screen and (min-width: #{$size}) {
-			@include grid-sizes($namespace);
+			body /deep/ {
+				@include grid-sizes($namespace);
+			}
 		}
 	}
 }
 
-/* Add class overrides */
+// add class overrides
 @each $val in $fg-breakpoints {
 	$namespace: nth($val, 1);
-	.force-#{$namespace} {
+	body /deep/ .force-#{$namespace} {
 		@include grid-sizes($namespace);
 	}
 }
