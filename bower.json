@@ -1,0 +1,17 @@
+{
+  "name": "cbn-flexgrid",
+  "version": "0.1.0",
+  "description": "CSS library for a flexbox-based grid system.",
+  "main": "dist/flexgrid.css",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "../",
+    "Gruntfile.js",
+    "package.json",
+    "src"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}

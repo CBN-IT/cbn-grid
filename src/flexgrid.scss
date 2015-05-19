@@ -1,0 +1,13 @@
+/**
+ * Flex Grid - enhanced
+ */
+// import base
+@import "_flex-grid";
+
+// add class overrides
+@each $val in $fg-breakpoints {
+	$namespace: nth($val, 1);
+	.force-#{$namespace} {
+		@include grid-sizes($namespace);
+	}
+}
