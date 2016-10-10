@@ -5,6 +5,18 @@
 <dom-module id="cbn-btn-styles">
 	<template>
 		<style>
+			[hidden] {
+				display: none !important;
+			}
+			
+			.margin-left-right {
+				margin: 0 10px!important;
+			}
+			
+			.margin-left{
+				margin: 0 auto 0 10px!important;
+			}
+			
 			paper-button{
 				text-transform: none;
 			}
@@ -14,26 +26,30 @@
 			}
 			
 			.icon-btn {
-				background-color: #4285f4;
-				color: #fff;
-				min-width: 0;
-				padding: 0 5px 0 5px;
-				margin: 0;
-				height: 26px;
-				overflow: hidden;
-				flex-shrink: 0
-			}
+					background-color: #4285f4;
+					color: #fff;
+					min-width: 0;
+					padding: 0 5px 0 5px;
+					margin: 0;
+					height: 26px;
+					overflow: hidden;
+					flex-shrink: 0
+				}
 
 			.icon-btn > .icon-btn-text {
 				margin-right: 5px;
 			}
 
+			.save > iron-icon,
+			.save > .save-icon,
 			.icon-btn > .icon-btn-icon {
 				width: 20px;
 				height: 20px;
 				margin: 3px 0;
 			}
 
+			.save > paper-spinner,
+			.save > .save-spinner,
 			.icon-btn > .icon-btn-spinner {
 				--paper-spinner-layer-1-color: white;
 				--paper-spinner-layer-2-color: white;
@@ -45,41 +61,66 @@
 				margin: 5px 2px;
 			}
 
-			.icon-btn.blue {
-				background-color: var(--paper-blue-500);
+			.background.blue {
+				background-color: var(--paper-blue-700);
 			}
-
-			.icon-btn.blue:hover {
+			.background.blue:hover {
 				background-color: var(--paper-blue-900);
 			}
-			.icon-btn.yellow {
-				background-color: var(--paper-yellow-a700);
+			.background.yellow {
+				background-color: var(--paper-orange-700);
 			}
-			.icon-btn.yellow:hover {
-				background-color: var(--paper-amber-a700);
+			.background.yellow:hover {
+				background-color: var(--paper-orange-900);
 			}
-			.icon-btn.red {
-				background-color: var(--google-red-500);
+			.background.red {
+				background-color: var(--paper-red-700);
 			}
-
-			.icon-btn.red:hover {
+			.background.red:hover {
 				background-color: var(--paper-red-900);
 			}
-
-			.icon-btn.green {
-				background-color: var(--google-green-500);
+			.background.green {
+				background-color: var(--google-green-700);
 			}
-
-			.icon-btn.green:hover {
+			.background.green:hover {
 				background-color: var(--paper-green-900);
 			}
-
-			.icon-btn.grey {
-				background-color: var(--paper-grey-500);
+			.background.grey {
+				background-color: var(--paper-grey-700);
 			}
-
-			.icon-btn.grey:hover {
+			.background.grey:hover {
 				background-color: var(--paper-grey-900);
+			}
+			
+			.color.blue {
+				color: var(--paper-blue-700);
+			}
+			.color.blue:hover {
+				color: var(--paper-blue-900);
+			}
+			.color.yellow {
+				color: var(--paper-orange-300);
+			}
+			.color.yellow:hover {
+				color: var(--paper-orange-700);
+			}
+			.color.red {
+				color: var(--paper-red-700);
+			}
+			.color.red:hover {
+				color: var(--paper-red-900);
+			}
+			.color.green {
+				color: var(--google-green-700);
+			}
+			.color.green:hover {
+				color: var(--paper-green-900);
+			}
+			.color.grey {
+				color: var(--paper-grey-500);
+			}
+			.color.grey:hover {
+				color: var(--paper-grey-900);
 			}
 			
 			
