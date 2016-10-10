@@ -11,6 +11,9 @@
 			.margin-left-right {
 				margin: 0 10px!important;
 			}
+			.margin-left{
+				margin: 0 auto 0 10px!important;
+			}
 			paper-button {
 				text-transform: none;
 			}
@@ -21,7 +24,7 @@
 			.save-small {
 				background: #4285f4;
 				color: #fff;
-				min-width: 0px;
+				min-width: 0;
 				padding: 5px 6px 3px 1px;
 				margin: 20px 15px 10px 9px;
 				vertical-align: middle;
@@ -35,18 +38,6 @@
 				width: 100px;
 				background-color: #008512;
 			}
-			.yellow{
-				background-color: #C39847;
-			}
-			.red{
-				background:#B50000
-			}
-			.green{
-				background-color: #008512;
-			}
-			.grey{
-				background-color: #979494;
-			}
 			.small-icon {
 				--iron-icon-width: 15px;
 				--iron-icon-height: 15px;
@@ -56,16 +47,11 @@
 				font-size: 18px;
 				font-weight: bold;
 			}
-			.paper-form {
+			.small-btn{
+				padding: 0;
+				min-width: 0;
 				background-color: white;
-				box-sizing: border-box;
-				padding-bottom: 10px;
-				overflow-y: hidden;
-			}
-			.header-form{
-				padding:15px 0 0 15px;
-				font-weight: bold;
-				display:block
+				color: white;
 			}
 			/*</editor-fold>*/
 
@@ -106,7 +92,7 @@
 			
 			cbn-data-table paper-icon-button:hover,
 			cbn-data-table paper-button:hover {
-				opacity: 0.6;
+				/*opacity: 0.6;*/
 			}
 
 			cbn-data-table span {
@@ -263,43 +249,67 @@
 				margin: 5px 2px;
 			}
 
-			.icon-btn.blue {
-				background-color: var(--paper-blue-500);
+			.background.blue {
+				background-color: var(--paper-blue-700);
 			}
-
-			.icon-btn.blue:hover {
+			.background.blue:hover {
 				background-color: var(--paper-blue-900);
 			}
-			.icon-btn.yellow {
-				background-color: var(--paper-yellow-a700);
+			.background.yellow {
+				background-color: var(--paper-orange-700);
 			}
-			.icon-btn.yellow:hover {
-				background-color: var(--paper-amber-a700);
+			.background.yellow:hover {
+				background-color: var(--paper-orange-900);
 			}
-			.icon-btn.red {
-				background-color: var(--google-red-500);
+			.background.red {
+				background-color: var(--paper-red-700);
 			}
-
-			.icon-btn.red:hover {
+			.background.red:hover {
 				background-color: var(--paper-red-900);
 			}
-
-			.icon-btn.green {
-				background-color: var(--google-green-500);
+			.background.green {
+				background-color: var(--google-green-700);
 			}
-
-			.icon-btn.green:hover {
+			.background.green:hover {
 				background-color: var(--paper-green-900);
 			}
-
-			.icon-btn.grey {
-				background-color: var(--paper-grey-500);
+			.background.grey {
+				background-color: var(--paper-grey-700);
 			}
-
-			.icon-btn.grey:hover {
+			.background.grey:hover {
 				background-color: var(--paper-grey-900);
 			}
 			
+			.color.blue {
+				color: var(--paper-blue-700);
+			}
+			.color.blue:hover {
+				color: var(--paper-blue-900);
+			}
+			.color.yellow {
+				color: var(--paper-orange-300);
+			}
+			.color.yellow:hover {
+				color: var(--paper-orange-700);
+			}
+			.color.red {
+				color: var(--paper-red-700);
+			}
+			.color.red:hover {
+				color: var(--paper-red-900);
+			}
+			.color.green {
+				color: var(--google-green-700);
+			}
+			.color.green:hover {
+				color: var(--paper-green-900);
+			}
+			.color.grey {
+				color: var(--paper-grey-500);
+			}
+			.color.grey:hover {
+				color: var(--paper-grey-900);
+			}
 			/*</editor-fold>*/
 			
 			
@@ -315,11 +325,35 @@
 			}
 			/*</editor-fold>*/
 			
-			
+			/*<editor-fold desc="form" defaultstate="collapsed">*/
+			.form-container {
+				margin: 10px 10px 10px 0;
+			}
+			.paper-form {
+				background-color: white;
+				box-sizing: border-box;
+				padding-bottom: 10px;
+				overflow-y: auto;
+			}
+			.header-form{
+				padding:15px 0 0 15px;
+				font-weight: bold;
+				display:block
+			}
+			/*</editor-fold>*/
 			[hidden] {
 				display: none !important;
 			}
 
+			/*<editor-fold desc="dialog" defaultstate="collapsed">*/
+			.footer-dialog{
+				margin-bottom: 10px!important;
+			}
+			.footer-dialog-simple{
+				margin-bottom: 10px!important;
+				margin-top: 20px!important;
+			}
+			/*</editor-fold>*/
 		</style>
 	</template>
 </dom-module>
